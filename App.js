@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NativeRouter, Route,Link, Routes, Outlet } from "react-router-native";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import { StyleSheet, Text, View,Image,Button,Alert } from "react-native";
+import Home from "./sai";
+import Book from "./book";
+import Down from "./down";
+// import { Router } from "react-router-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const  router=createNativeStackNavigator()
+const App = () => (
+  
+<NavigationContainer>
+  <router.Navigator>
+    
+      <router.Screen name='Aashirwad Labs' component={Home}  />
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+      <router.Screen name='Sample' component={Book}  />
+      <router.Screen name='Download Report' component={Down} />
+      
+
+
+    </router.Navigator>
+    </NavigationContainer>
+      
+
+
+  
+
+
+);
+
+
+export default App;
