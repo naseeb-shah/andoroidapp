@@ -70,9 +70,9 @@ ${na}
 
     return(
         <View
-        style={{flex: 1}}
+        style={styles.main}
         >
-    <View style={styles.main}>
+    <View >
 <Text style={styles.sai}>Name (नाम )
 
 </Text>
@@ -83,7 +83,7 @@ ${na}
         keyboardType="text"
             underlineColorAndroid="transparent"
             placeholder="Name"
-            placeholderTextColor="#9a73ef"
+            placeholderTextColor="white"
             autoCapitalize="none"
             onChangeText={(text) => se({...re,['name']:text})} />
 <Text style={styles.sai}>Father Name( पिता का नाम )</Text>
@@ -104,16 +104,16 @@ ${na}
 
             underlineColorAndroid="transparent"
             placeholder="FatherName"
-            placeholderTextColor="#9a73ef"
+            placeholderTextColor="white"
             autoCapitalize="none"
             onChangeText={(text)=>se({...re,['fname']:text})} />
 
 <AnimatedLoader
       visible={visible}
-      overlayColor="rgba(0,128,0,0.65)"
+      overlayColor="rgba(0,0,0,0.5)"
       animationStyle={styles.lottie}
       speed={1}>
-      <Text>Doing something...</Text>
+      <Text>Loading...</Text>
     </AnimatedLoader>
            
 
@@ -128,7 +128,7 @@ ${na}
 
             underlineColorAndroid="transparent"
             placeholder="Mobile Number"
-            placeholderTextColor="#9a73ef"
+            placeholderTextColor="white"
             autoCapitalize="none"
             onChangeText={(text)=>se({...re,['number']:text})} />
             
@@ -140,7 +140,7 @@ ${na}
 
                 underlineColorAndroid="transparent"
                 placeholder="Landmark"
-                placeholderTextColor="#9a73ef"
+                placeholderTextColor="white"
                 autoCapitalize="none"
                 onChangeText={(text)=>se({...re,['landmark']:text})} />
                 <Text  style={styles.sai}>  Village(गांव )</Text>
@@ -151,7 +151,7 @@ ${na}
                 value={re.vill}
                         underlineColorAndroid="transparent"
                         placeholder="Village"
-                        placeholderTextColor="#9a73ef"
+                        placeholderTextColor="white"
                         autoCapitalize="none"
                         onChangeText={(text)=>se({...re,['vill']:text})} />
 
@@ -182,14 +182,17 @@ const styles = StyleSheet.create({
         borderColor: "white",
         borderWidth: 2,
 
-        borderRadius: 10
+        borderRadius: 0,
+      color:'white'
     },
     submitButton: {
-        // backgroundColor: '#7a42f4',
+        // backgroundColor: '',
         padding: 10,
         margin: 5,
         borderRadius:15,
         borderWidth:2,
+        marginLeft:'10%',
+        width:'80%',
         borderColor: "white",
        
     
@@ -199,7 +202,7 @@ const styles = StyleSheet.create({
         // color: 'white'
         
         textAlign:"center",
-        fontSize:24,
+        fontSize:18,
         color:'white'
     },
     sai:{
@@ -211,8 +214,8 @@ const styles = StyleSheet.create({
     },
     main:{
 
-        backgroundColor:"rgba(100,200,400,.9)",
-
+        backgroundColor:"rgb(8,143,143)",
+flex:1
      
    
     },
@@ -221,7 +224,7 @@ const styles = StyleSheet.create({
         textAlign:"center",
         padding:10,
 
-        borderRadius:15,
+        borderRadius:0,
         borderColor:"red"
 
 

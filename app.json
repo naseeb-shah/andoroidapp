@@ -1,10 +1,19 @@
 {
   "expo": {
-    "name": "AwesomeProject",
-    "slug": "AwesomeProject",
+    "name": "aashirwad-labs",
+    "slug": "aashirwad-labs",
     "version": "1.0.0",
+    "owner": "naseebshah",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.naseebshah.aashirwadlabs"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1857fec5-0771-4617-a472-fc1c58642853"
+      }
+    }
   }
 }

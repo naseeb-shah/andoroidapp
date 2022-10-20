@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { View ,Text,StyleSheet,ImageBackground,TextInput,TouchableOpacity,ScrollView} from "react-native"
 import AnimatedLoader from 'react-native-animated-loader';
-import Footer from "./footer";
-import sai from './axios'
-import Helper from "./sholist"
+import Footer from "../footer";
+import sai from '../axios'
+// import Helper from "./sholist"
 
 export default function Down(){
 const [re,se]=useState('')
@@ -26,10 +26,7 @@ const [visible, setVisible] = useState(false);
 
     return( 
         <View
-
-style={styles.main}
-
-        // style={{flex: 1  }}
+        style={{flex: 1}}
         >
     <View
   
@@ -50,7 +47,7 @@ style={styles.main}
         maxLength={10}
             underlineColorAndroid="transparent"
             placeholder="Mobile Number"
-            placeholderTextColor="white"
+            placeholderTextColor="#9a73ef"
             autoCapitalize="none"
             value={re}
             onChangeText={(text)=>se(text)} />
@@ -86,7 +83,7 @@ const styles = StyleSheet.create({
         margin: 15,
         padding: 15,
         height: 50,
-        borderColor: "white",
+        borderColor: "black",
         borderWidth: 2,
 
         borderRadius: 10
@@ -95,7 +92,6 @@ const styles = StyleSheet.create({
         // backgroundColor: '#7a42f4',
         padding: 10,
         margin: 5,
-        
        
     
         
@@ -107,8 +103,8 @@ const styles = StyleSheet.create({
         fontSize:24,
         borderWidth:2,
         borderRadius:15,
-        borderColor: "white",
-        // backgroundColor:"rgba(0,0,0,1)"
+        borderColor: "black",
+        backgroundColor:"rgba(0,0,0,1)"
     },
     sai:{
         marginTop:5,
@@ -118,15 +114,12 @@ const styles = StyleSheet.create({
     },
     main:{
      backgroundColor:'greenyellow',
-     backgroundColor: 'rgb(8, 143, 143)'
-     ,flex:1
+
      
    
     },
     ma:{
-        // backgroundColor:'white',
-        // backgroundColor: 'rgb(8, 143, 143)',
-
+        backgroundColor:'white',
         textAlign:"center",
         padding:10,
 

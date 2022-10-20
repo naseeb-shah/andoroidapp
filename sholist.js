@@ -45,21 +45,26 @@ onPress={
 const styles = StyleSheet.create({
 
     submitButton: {
-        backgroundColor:"rgba(100,200,400,.9)",
+     
     
         padding: 10,
         margin: 5,
-        borderRadius:15
+        // borderRadius:15,
+        
+        borderWidth:2,
     
         
     },
     submitButtonText: {
-        color: 'white'
-        ,
+      
+        
         textAlign:"left",
         fontSize:24,
-        backgroundColor:"rgba(100,200,400,.9)",
+    
         borderRadius:15,
+    
+    color:'white'
+    
     },
     sai:{
         marginTop:5,

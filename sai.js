@@ -1,5 +1,6 @@
 import React from "react";
 
+import { StatusBar } from 'react-native'
 
 import { Link } from "@react-navigation/native"
 
@@ -8,11 +9,18 @@ import { StyleSheet, Text, View, Image, Button, Alert } from "react-native";
 import Footer from "./footer";
 // import Home from "./sai";
 
+import Ionicons from '@expo/vector-icons/FontAwesome';
 
 const App = () => (
   <View style={styles.container} >
-    <Image style={styles.title} source={require('./img/logo512.jpg')} />
+          <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "rgb(8,143,143)" translucent = {true}/>
 
+    {/* <Image style={styles.title} source={require('./img/logo512.jpg')} /> */}
+{/* <Ionicons  style={styles.u} name="male" size={50}></Ionicons> */}
+{/* <Ionicons style={styles.u} name="heart" size={50}></Ionicons> */}
+{/* <Ionicons style={styles.u} name="female" size={50}></Ionicons> */}
+<Text style={styles.h}>Aashirwad Lab</Text>
+<Ionicons style={styles.u} name="heartbeat" size={200}></Ionicons>
     <Text style={styles.sub}>
       We Care Your Health and Wealth
 
@@ -37,23 +45,31 @@ const App = () => (
 const styles = StyleSheet.create({
 
 
-
+h:{
+color:'white',
+fontSize:40
+},
 
   
 
   container: {
     flex: 1,
     padding: 24,
-    backgroundColor: 'white'
+    backgroundColor: 'rgb(8, 143, 143)',
+    borderWidth:1,
+    borderColor:'red'
 
 
   },
   title: {
-    width: '100%',
-    marginBottom: 20
+    // width: 100,
+    // marginBottom: 20
     // ,display:"none",
+    // ,
+    // height: '40%',
+    borderRadius:25
     ,
-    height: '40%'
+    marginLeft:70
   },
   sub: {
     marginTop: '36%',
@@ -61,11 +77,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
 
-    color: "rgba(100,200,400,.9)",
+    color: "white",
     textAlign: "center",
   },
+
+
+  u:{
+color:'white'
+,
+alignContent:'center',
+alignSelf:'center'
+  },
   link: {
-    backgroundColor: "rgba(100,200,400,.9)",
+    // backgroundColor: "rgba(0,00,00,1)",
+  
     color: "white",
     textAlign: "center",
     fontSize: 26,
@@ -73,7 +98,10 @@ const styles = StyleSheet.create({
     height: 55
     ,
     margin: 5
-
+,
+borderWidth:2
+,
+borderColor:'white'
 
   }
 });
